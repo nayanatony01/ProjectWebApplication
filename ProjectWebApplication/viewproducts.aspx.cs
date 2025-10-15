@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+
+namespace ProjectWebApplication
+{
+    public partial class viewproducts : System.Web.UI.Page
+    {
+        DBConnCls obj = new DBConnCls();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                string sel = "select * from products_tab where category_id=" + Session["catid"] + "and product_status='available'";
+                DataTable dt = obj.Fn_Datatab(sel);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+            }
+        }
+
+        protected void ImageButton1_Command(object sender, CommandEventArgs e)
+        {
+            int getid = Convert.ToInt32(e.CommandArgument);
+            Session["productid"] = getid;
+            Response.Redirect("viewsingleproduct.aspx");
+        }
+    }
+}
