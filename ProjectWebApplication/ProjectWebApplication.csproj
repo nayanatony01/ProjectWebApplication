@@ -153,6 +153,7 @@
     <Content Include="LICENSE.txt" />
     <Content Include="Login.aspx" />
     <Content Include="Payment.aspx" />
+    <Content Include="pg1.aspx" />
     <Content Include="program.html" />
     <Content Include="READ-ME.txt" />
     <Content Include="Register.aspx" />
@@ -239,6 +240,13 @@
     </Compile>
     <Compile Include="Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pg1.aspx.cs">
+      <DependentUpon>pg1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pg1.aspx.designer.cs">
+      <DependentUpon>pg1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
