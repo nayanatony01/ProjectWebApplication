@@ -2,6 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+        body {
+            background: #ffecf2;
+        }
         .category-container {
             display: flex;
             flex-wrap: wrap;
@@ -51,9 +54,6 @@
             margin-top: 5px;
         }
 
-        body {
-            background-color: #f8f9fa;
-        }
     </style>
 </asp:Content>
 
